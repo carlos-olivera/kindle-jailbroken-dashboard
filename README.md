@@ -5,12 +5,16 @@
 [![Tests](https://img.shields.io/badge/tests-77_passing-brightgreen.svg)](#verificación)
 
 Convierte un **Kindle Paperwhite 10.ª generación con jailbreak** en un panel
-de instrumentos e-ink (1072 × 1448 px, 300 ppi) que muestra hora y fecha de
-Santa Cruz de la Sierra, clima actual, el tipo de cambio oficial USD/BOB del
-BCB (vía [CUCU](https://docs.cucu.bo/bcb/oficial)) y la cotización P2P de
-Binance para **comprar USDT con BOB**. Verificado de punta a punta en un
-dispositivo real: renderizado en la Mac, despliegue por SSH sobre Wi-Fi,
-pintado con FBInk.
+de instrumentos e-ink (1072 × 1448 px, 300 ppi) que muestra hora y fecha
+locales, el clima de la ciudad que elijas (se configura por coordenadas en
+`.env`), el tipo de cambio oficial USD/BOB del BCB (vía
+[CUCU](https://docs.cucu.bo/bcb/oficial)) y la cotización P2P de Binance para
+**comprar USDT con BOB**. Verificado de punta a punta en un dispositivo real:
+renderizado en la Mac, despliegue por SSH sobre Wi-Fi, pintado con FBInk.
+
+¿Tu Kindle aún no tiene jailbreak? Aquí está la guía completa que se usó para
+preparar este dispositivo (SpringBreak + KUAL + MRPI + USBNetworkLite +
+FBInk): **[JAILBREAK_TUTORIAL.md](JAILBREAK_TUTORIAL.md)**.
 
 ![Vista previa](artifacts/dashboard.png)
 
@@ -71,7 +75,9 @@ kindle-scripts/           Dashboard Start/Stop + extensión KUAL (reversibles)
 - Kindle PW4 (u otro modelo ajustando dimensiones) con **jailbreak**,
   [USBNetworkLite](https://www.mobileread.com/forums/showthread.php?t=225030)
   y [FBInk](https://github.com/NiLuJe/FBInk) (probado con FBInk 1.25.0 en
-  `/mnt/us/libkh/bin/fbink`, instalado por KindleHackers/libkh).
+  `/mnt/us/libkh/bin/fbink`, instalado por KindleHackers/libkh). Si partes de
+  un Kindle sin modificar, sigue [JAILBREAK_TUTORIAL.md](JAILBREAK_TUTORIAL.md)
+  — deja el dispositivo exactamente en el estado que este proyecto asume.
 - Una clave SSH ED25519 cuya pública ya esté en
   `/mnt/us/usbnetlite/etc/dropbear/authorized_keys` del Kindle.
 - Mac y Kindle en la **misma red Wi-Fi confiable**.
@@ -324,8 +330,9 @@ Todos estos casos ocurrieron durante la puesta en marcha del proyecto:
 
 ## 11. Personalización
 
-- **Ubicación**: `LATITUDE`/`LONGITUDE` en `.env` (por defecto Santa Cruz de
-  la Sierra). El rótulo de ciudad está en `src/render/render-dashboard.ts`.
+- **Ciudad**: se puede especificar la ciudad directamente con
+  `LATITUDE`/`LONGITUDE` en `.env` (el clima usa esas coordenadas). El rótulo
+  con el nombre de la ciudad se cambia en `src/render/render-dashboard.ts`.
 - **Frecuencia**: `REFRESH_INTERVAL_MINUTES` y `FULL_REFRESH_EVERY`.
 - **Monto P2P**: `BINANCE_P2P_NOTIONAL_BOB`.
 - **Otro modelo de Kindle**: dimensiones en `src/render/palette.ts`
