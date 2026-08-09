@@ -1,0 +1,29 @@
+{
+  "latitude": -17.75,
+  "longitude": -63.25,
+  "generationtime_ms": 0.05,
+  "utc_offset_seconds": -14400,
+  "timezone": "America/La_Paz",
+  "timezone_abbreviation": "-04",
+  "elevation": 396,
+  "current_units": {
+    "time": "iso8601",
+    "interval": "seconds",
+    "temperature_2m": "°C",
+    "apparent_temperature": "°C",
+    "weather_code": "wmo code",
+    "is_day": "",
+    "relative_humidity_2m": "%",
+    "wind_speed_10m": "km/h"
+  },
+  "current": {
+    "time": "2026-08-08T14:15",
+    "interval": 900,
+    "temperature_2m": 29.4,
+    "apparent_temperature": 31.2,
+    "weather_code": 2,
+    "is_day": 1,
+    "relative_humidity_2m": 62,
+    "wind_speed_10m": 14.2
+  }
+}

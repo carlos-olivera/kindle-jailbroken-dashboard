@@ -1,0 +1,6 @@
+node_modules/
+artifacts/*.svg
+artifacts/*.png
+.data/
+dist/
+fonts/

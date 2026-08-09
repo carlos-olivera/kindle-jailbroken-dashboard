@@ -1,0 +1,15 @@
+{
+  "code": "000000",
+  "message": null,
+  "data": [
+    { "price": "13.05", "minTransAmount": "500", "maxTransAmount": "5000", "isMerchantAd": true },
+    { "price": "13.10", "minTransAmount": "100", "maxTransAmount": "2000", "isMerchantAd": true },
+    { "price": "13.12", "minTransAmount": "700", "maxTransAmount": "10000", "isMerchantAd": true },
+    { "price": "13.18", "minTransAmount": "50", "maxTransAmount": "1500", "isMerchantAd": false },
+    { "price": "13.25", "minTransAmount": "2000", "maxTransAmount": "20000", "isMerchantAd": true },
+    { "price": "13.40", "minTransAmount": "100", "maxTransAmount": "900", "isMerchantAd": false },
+    { "price": "abc", "minTransAmount": "1", "maxTransAmount": "10", "isMerchantAd": false },
+    { "price": "-5", "minTransAmount": "1", "maxTransAmount": "10", "isMerchantAd": false }
+  ],
+  "success": true
+}

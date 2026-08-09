@@ -1,0 +1,16 @@
+{
+  "tc_oficial": {
+    "regimen": "flexible",
+    "valor": 11.96,
+    "base": 6.86,
+    "compra": 11.86,
+    "venta": 12.07,
+    "moneda": "USD/BOB",
+    "fecha": "2026-08-06",
+    "fecha_publicacion": "2026-08-06",
+    "actualizado": "2026-08-06T12:00:00-04:00",
+    "proxima_publicacion": "2026-08-10T08:30:00-04:00"
+  },
+  "fuente": "Banco Central de Bolivia (bcb.gob.bo)",
+  "disclaimer": "Valores referenciales"
+}

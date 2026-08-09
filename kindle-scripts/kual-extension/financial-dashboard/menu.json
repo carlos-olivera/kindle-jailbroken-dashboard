@@ -1,0 +1,20 @@
+{
+  "items": [
+    {
+      "name": "Financial Dashboard",
+      "priority": 50,
+      "items": [
+        {
+          "name": "Dashboard Start (mantener despierto)",
+          "priority": 0,
+          "action": "/mnt/us/financial-dashboard/dashboard-start.sh"
+        },
+        {
+          "name": "Dashboard Stop (restaurar normal)",
+          "priority": 1,
+          "action": "/mnt/us/financial-dashboard/dashboard-stop.sh"
+        }
+      ]
+    }
+  ]
+}

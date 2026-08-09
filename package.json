@@ -1,0 +1,70 @@
+{
+  "name": "kindle-bolivia-financial-dashboard",
+  "version": "1.0.0",
+  "description": "Panel financiero de Bolivia para Kindle Paperwhite 4 (jailbreak + FBInk), renderizado en la Mac y desplegado por SSH sobre Wi-Fi.",
+  "license": "Apache-2.0",
+  "author": "Carlos Olivera Terrazas",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlos-olivera/kindle-jailbroken-dashboard.git"
+  },
+  "homepage": "https://github.com/carlos-olivera/kindle-jailbroken-dashboard#readme",
+  "bugs": {
+    "url": "https://github.com/carlos-olivera/kindle-jailbroken-dashboard/issues"
+  },
+  "keywords": [
+    "kindle",
+    "e-ink",
+    "dashboard",
+    "fbink",
+    "jailbreak",
+    "bolivia",
+    "exchange-rate",
+    "binance-p2p",
+    "open-meteo",
+    "svg",
+    "sharp",
+    "typescript"
+  ],
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "node --import tsx src/cli.ts",
+    "fetch": "node --import tsx src/cli.ts fetch",
+    "render": "node --import tsx src/cli.ts render",
+    "demo": "node --import tsx src/cli.ts demo",
+    "diagnose": "node --import tsx src/cli.ts diagnose",
+    "deploy": "node --import tsx src/cli.ts deploy",
+    "once": "node --import tsx src/cli.ts once",
+    "watch": "node --import tsx src/cli.ts watch",
+    "test": "vitest run",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run lint && npm run typecheck && npm run test"
+  },
+  "overrides": {
+    "vite": "7.3.1",
+    "thread-stream": "3.1.0"
+  },
+  "dependencies": {
+    "dotenv": "16.6.1",
+    "pino": "9.14.0",
+    "sharp": "0.34.5",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.5",
+    "@types/node": "25.9.2",
+    "eslint": "9.39.5",
+    "eslint-config-prettier": "10.1.8",
+    "prettier": "3.9.6",
+    "tsx": "4.23.1",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.65.0",
+    "vitest": "3.2.4"
+  }
+}
